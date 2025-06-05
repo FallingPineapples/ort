@@ -1,0 +1,33 @@
+ort = function(value_pineapple_img,
+  grid_size = function(x) {1/(250*(1.0001-x))},
+  grid_offset = function(x) {sin(x*100)*10}
+) {
+  # TODO: Normalize input to grayscale
+  building_pineapple_data = matrix(nrow=0, ncol=2,
+                                   dimnames=list(c(), c('x', 'y')))
+
+  for (x in 1:dim(value_pineapple_img)[1]) {
+    for (y in 1:dim(value_pineapple_img)[2]) {
+      s = grid_size(value_pineapple_img[x, y, 1, 1]) *
+        max(dim(value_pineapple_img))
+      o = grid_offset(value_pineapple_img[x, y, 1, 1]) *
+        max(dim(value_pineapple_img))
+      xmin = ceiling((x - o) / s)
+      xmax = floor((x - o + 1) / s)
+      ymin = ceiling((y - o) / s)
+      ymax = floor((y - o + 1) / s)
+      if (xmin > xmax | ymin > ymax) {
+        next
+      }
+      for (xs in xmin:xmax) {
+        for (ys in ymin:ymax) {
+          pointx = xs * s + o
+          pointy = ys * s + o
+          building_pineapple_data %<>% rbind(c(pointx, -pointy))
+        }
+      }
+    }
+  }
+
+  building_pineapple_data %>% as.data.frame()
+}
