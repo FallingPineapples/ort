@@ -1,8 +1,8 @@
-ort = function(value_pineapple_img,
+ort = function(img, bg=1,
   grid_size = function(x) {1/(250*(1.0001-x))},
   grid_offset = function(x) {sin(x*100)*10}
 ) {
-  # TODO: Normalize input to grayscale
+  value_pineapple_img = ensure_grayscale(img, bg)
   building_pineapple_data = matrix(nrow=0, ncol=2,
                                    dimnames=list(c(), c('x', 'y')))
 

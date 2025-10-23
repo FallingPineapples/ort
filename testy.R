@@ -1,5 +1,5 @@
-# plot(o(load.image(system.file("FallingPineapple_750x750.png", package = "ort"))))
-# plot(o(load.image(system.file("big_gradient.png", package = "ort"))))
+# plot(ort(load.image(system.file("FallingPineapple_750x750.png", package = "ort"))))
+# plot(ort(load.image(system.file("big_gradient.png", package = "ort"))))
 # load.image(system.file("alpha_gradient_test.png", package = "ort"))
 
 test_grayscale_idempotence = function() {
