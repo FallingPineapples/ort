@@ -1,3 +1,17 @@
+#' Create a data frame representaiton of an image
+#'
+#' Takes a \code{\link[imager]{cimg}} object and
+#' attempts to create a data frame that, when plotted using the default
+#' \code{\link[graphics]{plot}} in base R, looks like the original image.
+#'
+#' @param img An \code{\link[imager]{cimg}} object containing an image (from imager)
+#' @param bg Background color (default is white)
+#' @param grid_size Size of grid used for conversion
+#' @param grid_offset Offset of grid used for conversion
+#'
+#' @return A data frame with two columns, `x` and `y` that
+#' hopefully resembles the image when plotted
+#' @export
 ort = function(img, bg=1,
   grid_size = function(x) {1/(250*(1.0001-x))},
   grid_offset = function(x) {sin(x*100)*10}

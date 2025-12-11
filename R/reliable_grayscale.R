@@ -1,3 +1,11 @@
+#' Convert cimg object to grayscale via XYZ
+#'
+#' Improves on the XYZ method of \code{\link[imager]{grayscale}}
+#' by handling alpha channel and retaining relative luminance of
+#' the image
+#'
+#' @inheritParams ort
+#' @export
 ensure_grayscale = function(img, bg=1) {
   if (spectrum(img) == 1) {
     return(img)

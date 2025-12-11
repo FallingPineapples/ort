@@ -1,5 +1,4 @@
 Version: 1.0
-ProjectId: 68fb6fee-421c-46c0-bace-6d898b491b5b
 
 RestoreWorkspace: Default
 SaveWorkspace: Default
@@ -19,3 +18,4 @@ StripTrailingWhitespace: Yes
 BuildType: Package
 PackageUseDevtools: Yes
 PackageInstallArgs: --no-multiarch --with-keep.source
+PackageRoxygenize: rd,collate,namespace
