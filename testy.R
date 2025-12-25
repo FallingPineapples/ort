@@ -1,3 +1,5 @@
+# imager nonsense ------------
+
 # plot(ort(load.image(system.file("FallingPineapple_750x750.png", package = "ort"))))
 # plot(ort(load.image(system.file("big_gradient.png", package = "ort"))))
 # load.image(system.file("alpha_gradient_test.png", package = "ort"))
@@ -41,3 +43,41 @@ patch_srgb_conversions = function() {
     imager::RGBtosRGB(im*255)/255
   }, globalenv())
 }
+
+
+
+# examples ----------------------------------------------------------------
+# Load image using imager
+pineapple_img = load.image(system.file("FallingPineapple_750x750.png", package = "ort"))
+
+# Convert to data frame plot
+pineapple_ort = ort(pineapple_img)
+plot(pineapple_ort)
+
+# Example with alpha background
+alph_img = load.image(system.file("alpha_gradient_test.png", package = "ort"))
+
+# default assumes bg = 1 (white background)
+alph_ort = ort(alph_img)
+plot(alph_ort)
+
+alph_ort_grey = ort(alph_img, bg = 0.5)
+plot(alph_ort_grey)
+
+# ensure_grayscale
+# Load image using imager
+pineapple_img = load.image(system.file("FallingPineapple_750x750.png", package = "ort"))
+
+# Create greyscale version
+pineapple_gray = ensure_grayscale(pineapple_img)
+plot(pineapple_gray)
+
+# Example with alpha background
+alph_img = load.image(system.file("alpha_gradient_test.png", package = "ort"))
+
+# default assumes bg = 1 (white background)
+alph_gray = ensure_grayscale(alph_img)
+plot(alph_gray)
+
+alph_gray_darker = ensure_grayscale(alph_img, bg = 0.75)
+plot(alph_gray_darker)

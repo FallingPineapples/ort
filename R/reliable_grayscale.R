@@ -5,6 +5,25 @@
 #' the image
 #'
 #' @inheritParams ort
+#' @examples
+#' \dontrun{
+#' # Load image using imager
+#' pineapple_img = load.image(system.file("FallingPineapple_750x750.png", package = "ort"))
+#'
+#' # Create grayscale version
+#' pineapple_gray = ensure_grayscale(pineapple_img)
+#' plot(pineapple_gray)
+#'
+#' # Example with alpha background
+#' alph_img = load.image(system.file("alpha_gradient_test.png", package = "ort"))
+#'
+#' # default assumes bg = 1 (white background)
+#' alph_gray = ensure_grayscale(alph_img)
+#' plot(alph_gray)
+#'
+#' alph_gray_darker = ensure_grayscale(alph_img, bg = 0.75)
+#' plot(alph_gray_darker)
+#' }
 #' @export
 ensure_grayscale = function(img, bg=1) {
   if (spectrum(img) == 1) {

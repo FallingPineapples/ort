@@ -5,12 +5,31 @@
 #' \code{\link[graphics]{plot}} in base R, looks like the original image.
 #'
 #' @param img An \code{\link[imager]{cimg}} object containing an image (from imager)
-#' @param bg Background color (default is white)
+#' @param bg Background color in case of alpha (default is white)
 #' @param grid_size Size of grid used for conversion
 #' @param grid_offset Offset of grid used for conversion
 #'
 #' @return A data frame with two columns, `x` and `y` that
 #' hopefully resembles the image when plotted
+#' @examples
+#' \dontrun{
+#' # Load image using imager
+#' pineapple_img = load.image(system.file("FallingPineapple_750x750.png", package = "ort"))
+#'
+#' # Convert to data frame plot
+#' pineapple_ort = ort(pineapple_img)
+#' plot(pineapple_ort)
+#'
+#' # Example with alpha background
+#' alph_img = load.image(system.file("alpha_gradient_test.png", package = "ort"))
+#'
+#' # default assumes bg = 1 (white background)
+#' alph_ort = ort(alph_img)
+#' plot(alph_ort)
+#'
+#' alph_ort_grey = ort(alph_img, bg = 0.5)
+#' plot(alph_ort_grey)
+#' }
 #' @export
 ort = function(img, bg=1,
   grid_size = function(x) {1/(250*(1.0001-x))},

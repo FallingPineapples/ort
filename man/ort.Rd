@@ -18,7 +18,7 @@ ort(
 \arguments{
 \item{img}{An \code{\link[imager]{cimg}} object containing an image (from imager)}
 
-\item{bg}{Background color (default is white)}
+\item{bg}{Background color in case of alpha (default is white)}
 
 \item{grid_size}{Size of grid used for conversion}
 
@@ -32,4 +32,24 @@ hopefully resembles the image when plotted
 Takes a \code{\link[imager]{cimg}} object and
 attempts to create a data frame that, when plotted using the default
 \code{\link[graphics]{plot}} in base R, looks like the original image.
+}
+\examples{
+\dontrun{
+# Load image using imager
+pineapple_img = load.image(system.file("FallingPineapple_750x750.png", package = "ort"))
+
+# Convert to data frame plot
+pineapple_ort = ort(pineapple_img)
+plot(pineapple_ort)
+
+# Example with alpha background
+alph_img = load.image(system.file("alpha_gradient_test.png", package = "ort"))
+
+# default assumes bg = 1 (white background)
+alph_ort = ort(alph_img)
+plot(alph_ort)
+
+alph_ort_grey = ort(alph_img, bg = 0.5)
+plot(alph_ort_grey)
+}
 }

@@ -9,10 +9,30 @@ ensure_grayscale(img, bg = 1)
 \arguments{
 \item{img}{An \code{\link[imager]{cimg}} object containing an image (from imager)}
 
-\item{bg}{Background color (default is white)}
+\item{bg}{Background color in case of alpha (default is white)}
 }
 \description{
 Improves on the XYZ method of \code{\link[imager]{grayscale}}
 by handling alpha channel and retaining relative luminance of
 the image
+}
+\examples{
+\dontrun{
+# Load image using imager
+pineapple_img = load.image(system.file("FallingPineapple_750x750.png", package = "ort"))
+
+# Create grayscale version
+pineapple_gray = ensure_grayscale(pineapple_img)
+plot(pineapple_gray)
+
+# Example with alpha background
+alph_img = load.image(system.file("alpha_gradient_test.png", package = "ort"))
+
+# default assumes bg = 1 (white background)
+alph_gray = ensure_grayscale(alph_img)
+plot(alph_gray)
+
+alph_gray_darker = ensure_grayscale(alph_img, bg = 0.75)
+plot(alph_gray_darker)
+}
 }
