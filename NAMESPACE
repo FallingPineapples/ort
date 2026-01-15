@@ -2,3 +2,10 @@
 
 export(ensure_grayscale)
 export(ort)
+importFrom(imager,G)
+importFrom(imager,R)
+importFrom(imager,RGBtoXYZ)
+importFrom(imager,add.colour)
+importFrom(imager,spectrum)
+importFrom(magrittr,"%<>%")
+importFrom(magrittr,"%>%")
