@@ -2,7 +2,7 @@
 % Please edit documentation in R/o.R
 \name{ort}
 \alias{ort}
-\title{Create a data frame representaiton of an image}
+\title{Create a data frame representation of an image}
 \usage{
 ort(
   img,
@@ -16,7 +16,7 @@ ort(
 )
 }
 \arguments{
-\item{img}{An \code{\link[imager]{cimg}} object containing an image (from imager)}
+\item{img}{An \code{\link[imager]{cimg}} object containing an image (from 'imager')}
 
 \item{bg}{Background color in case of alpha (default is white)}
 

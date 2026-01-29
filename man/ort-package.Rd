@@ -5,7 +5,7 @@
 \alias{ort-package}
 \title{ort: Create a Data Frame Representation of an Image}
 \description{
-The package takes images imported via imager and outputs a data frame that, when plotted in base R, looks like the original image.
+Takes images imported via 'imager' and outputs a data frame that, when plotted in base 'R', looks like the original image.
 }
 \author{
 \strong{Maintainer}: Ethan C. Brown \email{ethancbrown@gmail.com} (Maintainer)

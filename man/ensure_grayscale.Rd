@@ -2,12 +2,12 @@
 % Please edit documentation in R/reliable_grayscale.R
 \name{ensure_grayscale}
 \alias{ensure_grayscale}
-\title{Convert cimg object to grayscale via XYZ}
+\title{Convert 'cimg' object to grayscale via XYZ}
 \usage{
 ensure_grayscale(img, bg = 1)
 }
 \arguments{
-\item{img}{An \code{\link[imager]{cimg}} object containing an image (from imager)}
+\item{img}{An \code{\link[imager]{cimg}} object containing an image (from 'imager')}
 
 \item{bg}{Background color in case of alpha (default is white)}
 }

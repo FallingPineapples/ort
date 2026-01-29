@@ -1,4 +1,4 @@
-#' Convert cimg object to grayscale via XYZ
+#' Convert 'cimg' object to grayscale via XYZ
 #'
 #' Improves on the XYZ method of \code{\link[imager]{grayscale}}
 #' by handling alpha channel and retaining relative luminance of

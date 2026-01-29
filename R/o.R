@@ -1,10 +1,10 @@
-#' Create a data frame representaiton of an image
+#' Create a data frame representation of an image
 #'
 #' Takes a \code{\link[imager]{cimg}} object and
 #' attempts to create a data frame that, when plotted using the default
 #' \code{\link[graphics]{plot}} in base R, looks like the original image.
 #'
-#' @param img An \code{\link[imager]{cimg}} object containing an image (from imager)
+#' @param img An \code{\link[imager]{cimg}} object containing an image (from 'imager')
 #' @param bg Background color in case of alpha (default is white)
 #' @param grid_size Size of grid used for conversion
 #' @param grid_offset Offset of grid used for conversion
