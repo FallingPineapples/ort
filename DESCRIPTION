@@ -14,8 +14,8 @@ Authors@R: c(
       role = c("cre"),
       comment = "Maintainer")
   )
-Description: The package takes images imported via imager and outputs a data
-  frame that, when plotted in base R, looks like the original image.
+Description: Takes images imported via 'imager' and outputs a data
+  frame that, when plotted in base 'R', looks like the original image.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
