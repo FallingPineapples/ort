@@ -5,7 +5,7 @@
 \alias{ort-package}
 \title{ort: Create a Data Frame Representation of an Image}
 \description{
-Takes images imported via 'imager' and outputs a data frame that, when plotted in base 'R', looks like the original image.
+Takes images, imported via 'imager', and converts them into a data frame that can be plotted to look like the imported image. This can be used for creating data that looks like a specific image. Additionally, images with color and alpha channels can be converted to grayscale in preparation for converting to the data frame format.
 }
 \author{
 \strong{Maintainer}: Ethan C. Brown \email{ethancbrown@gmail.com} (Maintainer)
