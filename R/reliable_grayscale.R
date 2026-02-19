@@ -1,10 +1,12 @@
 #' Convert 'cimg' object to grayscale via XYZ
 #'
-#' Improves on the XYZ method of \code{\link[imager]{grayscale}}
-#' by handling alpha channel and retaining relative luminance of
-#' the image
+#' Improves on the XYZ method of \code{\link[imager]{grayscale}} by handling
+#' alpha channel and retaining relative luminance of the image
 #'
 #' @inheritParams ort
+#'
+#' @return An \code{\link[imager]{cimg}} object, now in grayscale (just one
+#'   color channel).
 #' @examples
 #' \dontrun{
 #' # Load image using imager

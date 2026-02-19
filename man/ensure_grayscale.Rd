@@ -11,10 +11,13 @@ ensure_grayscale(img, bg = 1)
 
 \item{bg}{Background color in case of alpha (default is white)}
 }
+\value{
+An \code{\link[imager]{cimg}} object, now in grayscale (just one
+  color channel).
+}
 \description{
-Improves on the XYZ method of \code{\link[imager]{grayscale}}
-by handling alpha channel and retaining relative luminance of
-the image
+Improves on the XYZ method of \code{\link[imager]{grayscale}} by handling
+alpha channel and retaining relative luminance of the image
 }
 \examples{
 \dontrun{
