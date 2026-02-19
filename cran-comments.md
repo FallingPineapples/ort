@@ -5,9 +5,11 @@
 
 ## R CMD check results
 
-No errors or warnings. 1 note: New submission.
+No errors or warnings. 1 Note: new submission.
 
-## Corrections
-Removed extra file from top-level directory
+## Corrections in response to CRAN feedback
+- added more informative description
+- created minimal examples that run, and changed lengthier examples to \donttest
+- added value documention to ensure_grayscale.Rd
 
 
