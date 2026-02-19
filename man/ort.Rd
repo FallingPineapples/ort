@@ -34,14 +34,14 @@ attempts to create a data frame that, when plotted using the default
 \code{\link[graphics]{plot}} in base R, looks like the original image.
 }
 \examples{
-\dontrun{
 # Load image using imager
-pineapple_img = load.image(system.file("FallingPineapple_750x750.png", package = "ort"))
+pineapple_img = load.image(system.file("FallingPineapple_16x16.png", package = "ort"))
 
 # Convert to data frame plot
 pineapple_ort = ort(pineapple_img)
 plot(pineapple_ort)
 
+\donttest{
 # Example with alpha background
 alph_img = load.image(system.file("alpha_gradient_test.png", package = "ort"))
 

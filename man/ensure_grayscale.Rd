@@ -20,15 +20,15 @@ Improves on the XYZ method of \code{\link[imager]{grayscale}} by handling
 alpha channel and retaining relative luminance of the image
 }
 \examples{
-\dontrun{
 # Load image using imager
-pineapple_img = load.image(system.file("FallingPineapple_750x750.png", package = "ort"))
+pineapple_img = load.image(system.file("FallingPineapple_16x16.png", package = "ort"))
 
 # Create grayscale version
 pineapple_gray = ensure_grayscale(pineapple_img)
 plot(pineapple_gray)
 
 # Example with alpha background
+\donttest{
 alph_img = load.image(system.file("alpha_gradient_test.png", package = "ort"))
 
 # default assumes bg = 1 (white background)

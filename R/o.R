@@ -12,14 +12,14 @@
 #' @return A data frame with two columns, `x` and `y` that
 #' hopefully resembles the image when plotted
 #' @examples
-#' \dontrun{
 #' # Load image using imager
-#' pineapple_img = load.image(system.file("FallingPineapple_750x750.png", package = "ort"))
+#' pineapple_img = load.image(system.file("FallingPineapple_16x16.png", package = "ort"))
 #'
 #' # Convert to data frame plot
 #' pineapple_ort = ort(pineapple_img)
 #' plot(pineapple_ort)
 #'
+#' \donttest{
 #' # Example with alpha background
 #' alph_img = load.image(system.file("alpha_gradient_test.png", package = "ort"))
 #'
